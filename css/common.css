@@ -1,0 +1,86 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+/*头部*/
+.mm-header {
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+  background-color: #FF841D;
+}
+.mm-header .h-logo {
+  width: 5.3rem;
+  height: 100%;
+  position: relative;
+}
+.mm-header .h-logo a {
+  position: absolute;
+  left: .3rem;
+  top: .25rem;
+  height: 1rem;
+  display: block;
+  width: 3.7rem;
+  height: .5rem;
+}
+.mm-header .h-logo a img {
+  border: none;
+  width: 100%;
+}
+.mm-header .h-right {
+  width: 1rem;
+  height: 1rem;
+  padding: .16rem;
+}
+.mm-header .h-right img {
+  display: block;
+  width: .68rem;
+}
+.mm-footer {
+  width: 100%;
+  background-color: #F1F1F1;
+  /*底部导航栏*/
+  /*下载地址栏*/
+}
+.mm-footer .nav ul {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.mm-footer .nav ul li {
+  float: left;
+  width: 33.33%;
+  height: 100%;
+}
+.mm-footer .nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: .5rem;
+  color: #969696;
+  font-size: .25rem;
+  border-right: 1px solid #ccc;
+}
+.mm-footer .nav ul li:last-child a {
+  border-right: none;
+}
+.mm-footer .link {
+  margin-top: .3rem;
+  font-size: .25rem;
+  text-align: center;
+}
+.mm-footer .link a:first-child {
+  color: red;
+}
+.mm-footer .link a:nth-child(2) {
+  color: #969696;
+}
