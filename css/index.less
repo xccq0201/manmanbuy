@@ -1,5 +1,124 @@
+@color:#FF841D;
+@bgcColor:#F1F1F1;
 .mm-main {
-  width: 100%;
-  background-color: pink;
-  height: 100px;
-}
+    width: 100%;
+
+    /*搜索框模块*/ 
+    .search {
+      width: 100%;
+      height: 1rem;
+      padding: .2rem;
+      .search_input {
+        height: .6rem;
+        background-color: @bgcColor;
+        width: 4.6rem;
+        border-radius: .3rem;
+        padding-left: .2rem;
+        font-size: .24rem;
+      }
+      .searchBtn {
+          height: .6rem;
+          background-color: @color;
+          border-radius: .3rem;   
+          width: 1.26rem;   
+          font-size: .26rem;
+          color: #fff;    
+      }
+    }
+    /*分割线*/ 
+    .line {
+        width: 100%;
+        height: .2rem;
+        background-color: @bgcColor;
+    }
+    /*分类导航*/ 
+    .category {
+        padding: .2rem 0;
+        ul {
+            li{
+                float: left;
+                width: 25%;
+                a {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    padding: .25rem .25rem 0;
+                    img {
+                        width: 100%;
+                    }
+                    p{
+                        margin-top: .1rem;
+                        font-size: .2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /*超级折扣推荐*/ 
+    .recommend {
+        width: 100%;
+        .r-title {
+            padding: .1rem;
+            background-color: @color;
+            height: 100%;
+            height: .7rem;
+            h3 {
+                padding-left: .1rem;
+                float: left;
+                font-size: .26rem;
+                color: #fff;
+                font-weight: normal;
+                height: .5rem;
+                line-height: .5rem;
+            }
+        }  
+        .product {
+            height: 100%;
+            width: 100%;
+            ul {
+                height: 100%;
+                background-color: #fff;
+                li {
+                    height: 100%;
+                    width: 100%;
+                    border-bottom: 1px solid #ccc;
+                    a {             
+                        display: block;
+                        width: 100%;
+                        padding: .2rem 0;
+                        height: 100%;
+                        img {
+                            float: left;
+                            width: 2.2rem;
+                            margin-right: .2rem;
+                        }
+                        .info {
+                            width: 4rem;
+                            height: 2rem;
+                            position: relative;
+                            .title {
+                                font-size: .28rem;
+                                .price {
+                                    color: orange;
+                                }
+                            }
+                            .bottom {
+                                position: absolute;
+                                width: 100%;
+                                bottom: .1rem;
+                                font-size: .22rem;
+                                color: #a1a1a1;
+                                .time {
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }

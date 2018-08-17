@@ -28,7 +28,40 @@
     </div>
 
     <!-- 主体 -->
-    <div class="mm-main"></div>
+    <div class="mm-main">
+
+      <!-- 搜索框 -->
+      <div class="search">
+        <input type="text" class="search_input" placeholder="请输入要比价的商品">
+        <button type="button" class="searchBtn">搜索</button>
+      </div>
+      <!-- 分割线 -->
+      <div class="line"></div>
+
+      <!--分类项 -->
+      <div class="category">
+        <ul class="clearfix">
+         <!-- 挖个坑 -->
+        </ul>
+      </div>
+
+      <!-- 分割线 -->
+      <div class="line"></div>
+
+      <!-- 折扣推荐 -->
+      <div class="recommend">
+        <div class="r-title">
+          <h3>超级折扣推荐</h3>
+        </div>
+
+        <div class="product">
+          <ul>
+            <!-- 第二个坑 -->
+          </ul>
+        </div>
+      </div>
+
+    </div>
 
     <!-- 底部 -->
     <div class="mm-footer">
@@ -48,11 +81,40 @@
     </div>
   </div>
 
+  <script type="text/html" id="temp_cate">
+    {{ each result v i }}
+      <li >
+        <a href=" {{ v.titlehref }}" data-id="{{ v.indexmenuId}}">
+          {{@v.img}}
+          <p>{{v.name}}</p>
+        </a>
+      </li>
+    {{ /each }}
+    </script>
+
+    <script type="text/html" id="temp_pro">
+      {{ each result v i }}
+      <li>
+        <a href="#" class="clearfix">
+          {{@v.productImg2}}
+          <div class="fl info">
+            <div class="title">
+              <span class="proDesc">{{ v.productName }}</span>
+              <span class="price">{{ v.productPinkage }}</span>
+            </div>
+            <div class="bottom">
+              <span class="time">{{ v.productFrom }}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      {{ /each }}
+    </script>
   
 
   <script src="./js/rem.js"></script>
   <script src="./lib/jquery/jquery.min.js"></script>
-  <script src="./lib/artTemplate/art-template.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
   <script src="./js/index.js"></script>
 </body>
 </html>
