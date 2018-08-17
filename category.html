@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/category.css">
 
   <title>慢慢买</title>
 </head>
@@ -35,30 +35,10 @@
         <input type="text" class="search_input" placeholder="请输入要比价的商品">
         <button type="button" class="searchBtn">搜索</button>
       </div>
-      <!-- 分割线 -->
-      <div class="line"></div>
 
-      <!--分类项 -->
-      <div class="category">
-        <ul class="clearfix">
-         <!-- 挖个坑 -->
-        </ul>
-      </div>
-
-      <!-- 分割线 -->
-      <div class="line"></div>
-
-      <!-- 折扣推荐 -->
-      <div class="recommend">
-        <div class="r-title">
-          <h3>超级折扣推荐</h3>
-        </div>
-
-        <div class="product">
-          <ul>
-            <!-- 第二个坑 -->
-          </ul>
-        </div>
+      <!-- 分类 -->
+      <div class="nav">
+          <!-- 挖坑 -->
       </div>
 
     </div>
@@ -81,42 +61,33 @@
     </div>
   </div>
 
-  <!-- 分类模板 -->
-  <script type="text/html" id="temp_cate">
-    {{ each result v i }}
-      <li >
-        <a href=" {{ v.titlehref }}" data-id="{{ v.indexmenuId}}">
-          {{@v.img}}
-          <p>{{v.name}}</p>
-        </a>
-      </li>
-    {{ /each }}
-    </script>
+  <!-- 导航模板 -->
+  <script type="text/html" id="temp_nav">
+    <ul>
+        {{ each result v i }}
+        <li class="cate">
+            <a href="javascript:;" class="cate-up" data-id="{{v.titleId}}">{{v.title}}</a>
+            <ul class="cate-goods clearfix current">
+            </ul>               
+        </li>
+        {{ /each }}
+    </ul>
+  </script>
 
-    <!-- 产品模板 -->
-    <script type="text/html" id="temp_pro">
-      {{ each result v i }}
-      <li>
-        <a href="#" class="clearfix">
-          {{@v.productImg2}}
-          <div class="fl info">
-            <div class="title">
-              <span class="proDesc">{{ v.productName }}</span>
-              <span class="price">{{ v.productPinkage }}</span>
-            </div>
-            <div class="bottom">
-              <span class="time">{{ v.productFrom }}</span>
-            </div>
-          </div>
-        </a>
-      </li>
-      {{ /each }}
-    </script>
+  <!-- 子菜单导航 -->
+  <script type="text/html" id="temp_link">
+    {{each result v i }}
+    <li>
+        <a href="#" data-cateId="{{ v.categoryId }}" data-titleId="{{ v.titleId }}">{{ v.category}}</a>
+    </li>
+    {{ /each}} 
+  </script>
+    
   
 
   <script src="./js/rem.js"></script>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/artTemplate/template-web.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/category.js"></script>
 </body>
 </html>

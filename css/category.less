@@ -1,0 +1,70 @@
+@color:#FF841D;
+@bgcColor:#F1F1F1;
+.mm-main {
+    width: 100%;
+
+    /*搜索框模块*/ 
+    .search {
+      width: 100%;
+      height: 1rem;
+      padding: .2rem;
+      .search_input {
+        height: .6rem;
+        background-color: @bgcColor;
+        width: 4.6rem;
+        border-radius: .3rem;
+        padding-left: .2rem;
+        font-size: .24rem;
+      }
+      .searchBtn {
+          height: .6rem;
+          background-color: @color;
+          border-radius: .3rem;   
+          width: 1.26rem;   
+          font-size: .26rem;
+          color: #fff;    
+      }
+    }
+
+    /*导航栏*/ 
+    .nav {
+        >ul {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            >li {
+                width: 100%;
+                >a {
+                    display: block;
+                    width: 100%; 
+                    border-bottom: 1px solid #ccc;
+                    height: 0.8rem;
+                    padding-left: .3rem;
+                    line-height: .8rem;
+                    font-size: .3rem;
+                    font-weight: bold;
+                    background-color: @bgcColor;
+                }
+            >ul {
+                li{
+                   width: 33.3%; 
+                   float: left;
+                   a{
+                       display: block;
+                       width: 100%;
+                       height: .8rem;
+                       font-size: .24rem;
+                       line-height: .8rem;
+                       text-align: center;
+                       border-bottom: 1px solid #ccc;
+                       border-right: 1px solid #ccc;
+                   }
+                }
+            }
+            >ul.current{
+                display: none;
+            }
+            }
+        }
+    }
+}
