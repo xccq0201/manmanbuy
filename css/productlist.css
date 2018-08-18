@@ -1,0 +1,77 @@
+.mm-main {
+  width: 100%;
+  /*搜索框模块*/
+  /*商品列表*/
+}
+.mm-main .search {
+  width: 100%;
+  height: 1rem;
+  padding: .2rem;
+}
+.mm-main .search .search_input {
+  height: .6rem;
+  background-color: #F1F1F1;
+  width: 4.6rem;
+  border-radius: .3rem;
+  padding-left: .2rem;
+  font-size: .24rem;
+}
+.mm-main .search .searchBtn {
+  height: .6rem;
+  background-color: #FF841D;
+  border-radius: .3rem;
+  width: 1.26rem;
+  font-size: .26rem;
+  color: #fff;
+}
+.mm-main .list .header {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  height: 0.76rem;
+  background-color: #F1F1F1;
+  line-height: .76rem;
+  padding-left: .2rem;
+  font-size: .26rem;
+  position: relative;
+}
+.mm-main .list .header input {
+  height: 0.68rem;
+  width: 1.2rem;
+  position: absolute;
+  top: 4px;
+  right: .1rem;
+  background-color: #D3D3D3;
+  border-radius: 10px;
+  font-size: .26rem;
+}
+.mm-main .list .content ul li {
+  padding: .2rem;
+  border-bottom: 1px solid #ccc;
+}
+.mm-main .list .content ul li .pic {
+  width: 2rem;
+  height: 2rem;
+}
+.mm-main .list .content ul li .pic img {
+  width: 100%;
+  height: 100%;
+}
+.mm-main .list .content ul li .info {
+  margin-left: .2rem;
+  width: 3.7rem;
+}
+.mm-main .list .content ul li .info .desc {
+  height: 0.88rem;
+  font-size: .24rem;
+}
+.mm-main .list .content ul li .info .price {
+  color: red;
+  font-size: .3rem;
+  height: 0.55rem;
+  line-height: .55rem;
+}
+.mm-main .list .content ul li .info .commit {
+  color: #969696;
+  font-size: .2rem;
+}

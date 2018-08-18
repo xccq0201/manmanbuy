@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- 移动端视口 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/productlist.css">
+
+  <title>慢慢买</title>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 头部 -->
+    <div class="mm-header ">
+      <div class="h-logo fl">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+          
+      </div>
+      <div class="h-right fr">
+        <img src="./images/header_app.png" alt="">
+      </div>
+    </div>
+
+    <!-- 主体 -->
+    <div class="mm-main">
+
+      <!-- 搜索框 -->
+      <div class="search">
+        <input type="text" class="search_input" placeholder="请输入要比价的商品">
+        <button type="button" class="searchBtn">搜索</button>
+      </div>
+
+      <!-- 商品列表 -->
+      <div class="list">
+          <div class="header">
+              <a href="index.html">首页</a>>
+              <a href="category.html">全部分类</a>>
+              <a href="javascript:;" class="categoryName">电视</a>
+              <input type="button" value="筛选">
+          </div>
+          <div class="content">
+              <ul>
+                  <!-- 挖坑 -->
+              </ul>
+          </div>
+      </div>
+
+    </div>
+
+    <!-- 底部 -->
+    <div class="mm-footer">
+      <div class="nav">
+        <ul class="clearfix">
+          <li><a href="#">登录</a></li>
+          <li><a href="#">注册</a></li>
+          <li><a href="#">返回顶部</a></li>
+        </ul>
+      </div>
+      <div class="link">
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <span>-- 掌上比价平台</span>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/html" id="temp">
+    {{ each result v i }}
+      <li>
+        <a href="javascript:;" class="clearfix">
+            <div class="pic fl">
+                {{@v.productImg}}
+            </div>
+            <div class="info fl">
+                <p class="desc">{{ v.productName }}</p>
+                <p class="price">{{ v.productPrice}}</p>
+                <span class="commit">{{ v.productQuote }}</span>
+                <span class="commit">{{ v.productCom }}</span>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+  </script>
+    
+  
+
+  <script src="./js/rem.js"></script>
+  <script src="./lib/jquery/jquery.min.js" charset="utf-8"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/productlist.js"></script>
+</body>
+</html>
